@@ -13,6 +13,7 @@ older_than_30 = []
 for age in ages
   if age > 30
     older_than_30 << age
+    #older_than_30.push(age)
   end
 end
 puts
@@ -31,7 +32,7 @@ sum_total = 0
 for age in ages
   sum_total += age
 end
-average_age = sum_total / ages.count
+average_age = sum_total / ages.length.to_f()  #turn one into a float
 puts
 print "Answer 4: " + average_age.to_s()
 
@@ -53,10 +54,11 @@ end
 
 # 2. Create an array of the big animals that are sea based.
 puts
-sea_based = []
+sea_based = Array.new()
 for big_animal in big_animals
   if big_animal["habitat"] == "sea"
-    sea_based << big_animal["name"]
+    sea_based << big_animal #["name"]
+    #sea_based.push(big_animal["name"])
   end
 end
 print "Answer 2: "
@@ -66,7 +68,8 @@ puts
 carnivores_only = []
 for big_animal in big_animals
   if big_animal["carnivore"] == true
-    carnivores_only << big_animal["name"]
+    carnivores_only << big_animal #["name"]
+    #carnivores_only.push(big_animal)
   end
 end
 print "Answer 3: "
